@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "SubsNotify",
+    "slug": "subscrip-notify",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "subscripnotify",
+    "platforms": ["ios"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.example.subscripnotify",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": ["subscripnotify"]
+          }
+        ]
+      }
+    },
+    "plugins": ["expo-router", "expo-secure-store"]
+  }
+}
