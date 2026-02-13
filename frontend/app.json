@@ -8,7 +8,7 @@
     "platforms": ["ios"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.mihari",
+      "bundleIdentifier": "com.jp.pripri.mihari",
       "infoPlist": {
         "CFBundleURLTypes": [
           {
