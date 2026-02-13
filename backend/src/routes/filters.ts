@@ -67,7 +67,7 @@ router.post("/", async (req: Request, res: Response) => {
 router.patch("/:filterId", async (req: Request, res: Response) => {
   try {
     const uid = req.query.uid as string;
-    const { filterId } = req.params;
+    const filterId = req.params.filterId as string;
     if (!uid) {
       res.status(400).json({ error: "uid query param is required" });
       return;
@@ -95,7 +95,7 @@ router.patch("/:filterId", async (req: Request, res: Response) => {
 router.delete("/:filterId", async (req: Request, res: Response) => {
   try {
     const uid = req.query.uid as string;
-    const { filterId } = req.params;
+    const filterId = req.params.filterId as string;
     if (!uid) {
       res.status(400).json({ error: "uid query param is required" });
       return;
