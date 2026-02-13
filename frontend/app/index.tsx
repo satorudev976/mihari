@@ -39,7 +39,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>SubsNotify</Text>
+      <Text style={styles.title}>mihari</Text>
       <Text style={styles.subtitle}>
         サブスク・請求メールをLINEでお知らせ
       </Text>

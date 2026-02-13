@@ -1,18 +1,18 @@
 {
   "expo": {
-    "name": "SubsNotify",
-    "slug": "subscrip-notify",
+    "name": "mihari",
+    "slug": "mihari",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "subscripnotify",
+    "scheme": "mihari",
     "platforms": ["ios"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.subscripnotify",
+      "bundleIdentifier": "com.example.mihari",
       "infoPlist": {
         "CFBundleURLTypes": [
           {
-            "CFBundleURLSchemes": ["subscripnotify"]
+            "CFBundleURLSchemes": ["mihari"]
           }
         ]
       }

@@ -1,4 +1,4 @@
-# SubsNotify
+# mihari
 
 Gmail のサブスク・請求系メールを監視し、LINE 公式アカウント経由でユーザーにプッシュ通知するサービス。
 
@@ -39,7 +39,7 @@ Gmail のサブスク・請求系メールを監視し、LINE 公式アカウン
 ## プロジェクト構成
 
 ```
-subscrip-notify/
+mihari/
 ├── README.md
 ├── deploy.sh                    # GCP デプロイスクリプト
 ├── docs/
@@ -132,7 +132,7 @@ gcloud firestore databases create --location=asia-northeast1
 #### Google OAuth 認証情報
 
 1. GCP Console → API とサービス → 認証情報 → OAuth 2.0 クライアント ID を作成
-2. アプリケーションの種類: **iOS** (Bundle ID: `com.example.subscripnotify`)
+2. アプリケーションの種類: **iOS** (Bundle ID: `com.example.mihari`)
 3. スコープ: `https://www.googleapis.com/auth/gmail.readonly`
 4. `GOOGLE_CLIENT_ID` と `GOOGLE_CLIENT_SECRET` をメモ
 

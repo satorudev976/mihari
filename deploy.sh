@@ -4,7 +4,7 @@ set -euo pipefail
 # ---- Configuration ----
 PROJECT_ID="${GCP_PROJECT_ID:?Set GCP_PROJECT_ID}"
 REGION="${GCP_REGION:-asia-northeast1}"
-SERVICE_NAME="subscrip-notify"
+SERVICE_NAME="mihari"
 IMAGE="gcr.io/${PROJECT_ID}/${SERVICE_NAME}"
 
 echo "=== Building and deploying ${SERVICE_NAME} ==="

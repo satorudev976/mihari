@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Health check
 app.get("/", (_req, res) => {
-  res.json({ status: "ok", service: "subscrip-notify" });
+  res.json({ status: "ok", service: "mihari" });
 });
 
 // Routes

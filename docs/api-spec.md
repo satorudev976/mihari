@@ -20,7 +20,7 @@ Base URL: `https://<CLOUD_RUN_URL>`
 ```json
 {
   "status": "ok",
-  "service": "subscrip-notify"
+  "service": "mihari"
 }
 ```
 
@@ -37,7 +37,7 @@ iOS アプリから Google OAuth の authCode を受け取り、refresh token �
 {
   "uid": "user-unique-id",
   "authCode": "4/0AXXXX...",
-  "redirectUri": "subscripnotify://oauth"
+  "redirectUri": "mihari://oauth"
 }
 ```
 

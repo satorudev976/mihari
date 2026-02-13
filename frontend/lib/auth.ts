@@ -10,7 +10,7 @@ const discovery = {
 };
 
 export function useGoogleAuth() {
-  const redirectUri = AuthSession.makeRedirectUri({ scheme: "subscripnotify" });
+  const redirectUri = AuthSession.makeRedirectUri({ scheme: "mihari" });
 
   const [request, response, promptAsync] = AuthSession.useAuthRequest(
     {

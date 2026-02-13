@@ -12,7 +12,7 @@ export default function RootLayout() {
           headerTitleStyle: { fontWeight: "bold" },
         }}
       >
-        <Stack.Screen name="index" options={{ title: "SubsNotify" }} />
+        <Stack.Screen name="index" options={{ title: "mihari" }} />
         <Stack.Screen name="link-line" options={{ title: "LINE連携" }} />
         <Stack.Screen name="filters" options={{ title: "フィルタ設定" }} />
         <Stack.Screen name="add-filter" options={{ title: "フィルタ追加" }} />
