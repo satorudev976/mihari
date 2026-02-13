@@ -1,4 +1,4 @@
-import { google, gmail_v1 } from "googleapis";
+import { google } from "googleapis";
 import { OAuth2Client } from "google-auth-library";
 import { decrypt } from "../utils/crypto";
 import type { GmailMessageSummary } from "../types";
@@ -16,8 +16,7 @@ export async function exchangeCodeForTokens(
   redirectUri: string
 ): Promise<{ refreshToken: string; accessToken: string; expiresAt: Date }> {
   const client = getOAuth2Client();
-  client.redirectUri_ = redirectUri;
-  const { tokens } = await client.getToken(authCode);
+  const { tokens } = await client.getToken({ code: authCode, redirect_uri: redirectUri });
 
   if (!tokens.refresh_token) {
     throw new Error("No refresh_token returned. Ensure access_type=offline and prompt=consent.");
