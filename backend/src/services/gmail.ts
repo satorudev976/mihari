@@ -13,10 +13,11 @@ export function getOAuth2Client(): OAuth2Client {
 
 export async function exchangeCodeForTokens(
   authCode: string,
-  redirectUri: string
+  redirectUri: string,
+  codeVerifier: string
 ): Promise<{ refreshToken: string; accessToken: string; expiresAt: Date }> {
   const client = getOAuth2Client();
-  const { tokens } = await client.getToken({ code: authCode, redirect_uri: redirectUri });
+  const { tokens } = await client.getToken({ code: authCode, redirect_uri: redirectUri, codeVerifier });
 
   if (!tokens.refresh_token) {
     throw new Error("No refresh_token returned. Ensure access_type=offline and prompt=consent.");

@@ -11,13 +11,13 @@ const router = Router();
 // POST /auth/google
 router.post("/google", async (req: Request, res: Response) => {
   try {
-    const { uid, authCode, redirectUri } = req.body as GoogleAuthRequest;
-    if (!uid || !authCode || !redirectUri) {
-      res.status(400).json({ error: "uid, authCode, redirectUri are required" });
+    const { uid, authCode, redirectUri, codeVerifier } = req.body as GoogleAuthRequest;
+    if (!uid || !authCode || !redirectUri || !codeVerifier) {
+      res.status(400).json({ error: "uid, authCode, redirectUri, codeVerifier are required" });
       return;
     }
 
-    const { refreshToken } = await exchangeCodeForTokens(authCode, redirectUri);
+    const { refreshToken } = await exchangeCodeForTokens(authCode, redirectUri, codeVerifier);
     const refreshTokenEnc = encrypt(refreshToken);
     const now = Timestamp.now();
 

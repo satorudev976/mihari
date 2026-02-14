@@ -13,10 +13,10 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 }
 
 // Auth
-export function postGoogleAuth(uid: string, authCode: string, redirectUri: string) {
+export function postGoogleAuth(uid: string, authCode: string, redirectUri: string, codeVerifier: string) {
   return request("/auth/google", {
     method: "POST",
-    body: JSON.stringify({ uid, authCode, redirectUri }),
+    body: JSON.stringify({ uid, authCode, redirectUri, codeVerifier }),
   });
 }
 

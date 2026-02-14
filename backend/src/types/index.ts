@@ -45,6 +45,7 @@ export interface GoogleAuthRequest {
   uid: string;
   authCode: string;
   redirectUri: string;
+  codeVerifier: string;
 }
 
 export interface LinkStartRequest {

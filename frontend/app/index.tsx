@@ -13,7 +13,7 @@ import { postGoogleAuth } from "@/lib/api";
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { response, promptAsync, redirectUri } = useGoogleAuth();
+  const { request, response, promptAsync, redirectUri } = useGoogleAuth();
   const [uid, setUid] = useState<string | null>(null);
   const [gmailLinked, setGmailLinked] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -26,8 +26,9 @@ export default function HomeScreen() {
   useEffect(() => {
     if (response?.type === "success" && uid) {
       const { code } = response.params;
+      const codeVerifier = request?.codeVerifier ?? "";
       setLoading(true);
-      postGoogleAuth(uid, code, redirectUri)
+      postGoogleAuth(uid, code, redirectUri, codeVerifier)
         .then(() => {
           setGmailLinked(true);
           Alert.alert("完了", "Gmailアカウントを連携しました");
